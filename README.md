@@ -70,6 +70,9 @@ To point yt-dlp to the server, set the `base_url` extractor argument:
    
 By default, `http://127.0.0.1:8001` is used as the server base URL.
 
+If running locally with a proxy, set the `NO_PROXY` environment variable to avoid proxying requests to the local server.
+e.g. `NO_PROXY=127.0.0.1`
+
 #### API Key
 
 Configure yt-dlp to use an API key if the server requires it:
