@@ -7,7 +7,7 @@ A yt-dlp plugin to solve YouTube JS challenges remotely using a [yt-cipher](http
     * [Install](#install)
       * [pip/pipx](#pippipx)
       * [Manual install](#manual-install)
-    * [Configure and run](#configure-and-run)
+    * [Configure](#configure)
       * [Server URL](#server-url)
       * [API Key](#api-key)
       * [Other options](#other-options)
@@ -53,10 +53,11 @@ If installed correctly, you should see the `remotecipher` JS Challenge provider 
 
     [debug] [youtube] [jsc] JS Challenge Providers: remotecipher-X.Y.Z (external)
 
-### Configure and run
+### Configure
 
 > [!TIP]
 > You can pass multiple options by separating them with semicolons (`;`). 
+> 
 > e.g `--extractor-args "youtubejsc-remotecipher:base_url=...;api_key=..."`
 
 #### Server URL
