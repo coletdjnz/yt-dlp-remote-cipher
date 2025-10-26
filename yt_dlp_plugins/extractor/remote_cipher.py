@@ -98,9 +98,9 @@ class RemoteCipherJCP(JsChallengeProvider):
                         message = 'The provided API key is probably invalid'
                     raise JsChallengeProviderError(
                         'HTTP Error 401: Authentication failed with remote cipher server. ' + message) from e
-                raise JsChallengeProviderError(f'HTTP error from remote cipher server: {e}') from e
+                raise JsChallengeProviderError(f'HTTP error from remote cipher server: {e}', expected=True) from e
 
-            raise JsChallengeProviderError(f'HTTP request to remote cipher server failed: {e}') from e
+            raise JsChallengeProviderError(f'HTTP request to remote cipher server failed: {e}', expected=True) from e
 
         if not isinstance(response, dict):
             raise JsChallengeProviderError('Invalid response from remote solver: expected JSON object')
